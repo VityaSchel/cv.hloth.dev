@@ -3,10 +3,9 @@ import { Title } from '@/shared/ui/typography/title'
 import { Subtitle } from '@/shared/ui/typography/subtitle'
 import { Button } from '@/shared/ui/button'
 
-export function Card({ title, subtitle, /*image, */button }: {
+export function Card({ title, subtitle, button }: {
   title: string
   subtitle: string
-  // image: string
   button: {
     label: string
     url: string
@@ -19,7 +18,9 @@ export function Card({ title, subtitle, /*image, */button }: {
         <Subtitle>{subtitle}</Subtitle>
       </div>
       <div className={styles.actionsBox}>
-        <a href={button.url}><Button tabIndex={-1}>{button.label}</Button></a>
+        <a href={button.url} target='_blank' rel='noreferrer nofollow'>
+          <Button tabIndex={-1}>{button.label}</Button>
+        </a>
       </div>
     </div>
   )
