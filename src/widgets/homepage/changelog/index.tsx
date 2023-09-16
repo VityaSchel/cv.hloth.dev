@@ -1,8 +1,9 @@
+import styles from './styles.module.scss'
 import { Changelog } from '@/entities/changelog'
 
 export function ChangelogWidget() {
   return (
-    <aside>
+    <aside className={styles.changelog}>
       <Changelog />
     </aside>
   )
