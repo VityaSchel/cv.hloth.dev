@@ -1,15 +1,13 @@
-import { ChangelogWidget } from '@/widgets/changelog'
+import { HomePageWrapper } from '@/widgets/homepage/wrapper'
+import { RelevantLinksWidget } from '@/widgets/homepage/relevant-links'
+import { ChangelogWidget } from '@/widgets/homepage/changelog'
 
 function HomePage() {
-  
-
   return (
-    <main>
-      <section>
-        
-      </section>
+    <HomePageWrapper>
+      <RelevantLinksWidget />
       <ChangelogWidget />
-    </main>
+    </HomePageWrapper>
   )
 }
 

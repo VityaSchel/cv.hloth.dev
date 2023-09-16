@@ -1,0 +1,29 @@
+.button {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+
+  &.light {
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 9, 11);
+    border: 1px solid rgb(228, 228, 231);
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, color;
+
+    &:hover {
+      background-color: hsl(240 4.8% 95.9%);
+      color: rgb(24, 24, 27);
+    }
+  }
+
+  &.dark {
+
+  }
+}

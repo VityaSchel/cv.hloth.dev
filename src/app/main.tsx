@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import HomePage from '@/pages/homepage'
-import '@/shared/styles/index.css'
+import '@/shared/styles/globals.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

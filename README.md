@@ -1,27 +1,7 @@
-# React + TypeScript + Vite
+# [cv.hloth.dev](https://cv.hloth.dev)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Website](https://cv.hloth.dev) with links to my resume and CV and changelog of these.
 
-Currently, two official plugins are available:
+[![insert picture here](insert picture here)](https://cv.hloth.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Built with Vite, React, TypeScript; SCSS modules, components inspired by @shadcn/ui's; FSD architecture in 1 hour. Quick coding with help of GitHub copilot, my own snippets and strict workflow with my own VSCode extensions etc. This is one of my cleanest projects by codebase.
