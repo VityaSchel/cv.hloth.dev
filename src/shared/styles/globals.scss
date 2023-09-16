@@ -16,3 +16,29 @@ html, body {
 a {
   text-decoration: none;
 }
+
+:root {
+  background-color: var(--card-background);
+
+  --border-color: #eee;
+  --card-background: rgb(255, 255, 255);
+  --card-border: rgb(228, 228, 231);
+  --card-shadow-color: rgba(0, 0, 0, 0.05);
+  --text-color: rgb(9, 9, 11);
+  --button-border: rgb(228, 228, 231);
+  --button-background-hover: hsl(240 4.8% 95.9%);
+  --button-text-hover: rgb(24, 24, 27);
+  --subtitle-color: rgb(113, 113, 122);
+
+  @media (prefers-color-scheme: dark) {
+    --border-color: #262626;
+    --card-background: rgb(9, 9, 11);
+    --card-border: rgb(39, 39, 42);
+    --card-shadow-color: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    --text-color: rgb(250, 250, 250);
+    --button-border: rgb(39, 39, 42);
+    --button-background-hover: hsl(240 3.7% 15.9%);
+    --button-text-hover: hsl(0 0% 98%);
+    --subtitle-color: rgb(161, 161, 170);
+  }
+}

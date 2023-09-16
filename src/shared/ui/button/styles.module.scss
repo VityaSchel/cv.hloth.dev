@@ -11,15 +11,15 @@
   border-radius: 6px;
 
   &.light {
-    background-color: rgb(255, 255, 255);
-    color: rgb(9, 9, 11);
-    border: 1px solid rgb(228, 228, 231);
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--button-border);
     transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color, color;
 
     &:hover {
-      background-color: hsl(240 4.8% 95.9%);
-      color: rgb(24, 24, 27);
+      background-color: var(--button-background-hover);
+      color: var(--button-text-hover);
     }
   }
 

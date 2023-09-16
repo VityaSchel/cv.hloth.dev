@@ -1,8 +1,8 @@
 .card {
-  background-color: #fff;
-  color: rgb(9, 9, 11);
-  border: 1px solid rgb(228, 228, 231);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow-color) 0px 1px 2px 0px;
   border-radius: 8px;
   width: 300px;
 
