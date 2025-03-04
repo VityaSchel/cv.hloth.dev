@@ -2,8 +2,8 @@
 
 [Website](https://cv.hloth.dev) with links to my resume and CV and changelog of these.
 
-[![Screenshot](https://github.com/VityaSchel/cv.hloth.dev/assets/59040542/0802793c-0676-47d0-aae2-a9b7fea07af1#gh-light-mode-only)](https://cv.hloth.dev)
-[![Screenshot](https://github.com/VityaSchel/cv.hloth.dev/assets/59040542/832964b3-4fc6-4346-8995-6ee707d2b80a#gh-dark-mode-only)](https://cv.hloth.dev)
+![Screenshot](https://github.com/user-attachments/assets/bbc011dc-c7b4-4bcc-9aa4-481453bae357#gh-light-mode-only)
+![Screenshot](https://github.com/user-attachments/assets/d321738a-7ea1-4e57-a934-263b126bcc32#gh-dark-mode-only)
 
 2025: Rebuilt with Vite, Svelte, SvelteKit, TypeScript; SCSS, similar components; I used Prettier and eslint.
 

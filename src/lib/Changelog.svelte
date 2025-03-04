@@ -1,10 +1,12 @@
 <script>
   import Heading from "./ui/Heading.svelte"
+  import Date from "./ui/Date.svelte"
 </script>
 
 <aside class="changelog">
   <Heading>Changelog</Heading>
   <ul>
+    <li>v5 — Rebuilt with Svelte & added CV <Date at={1741002612000} /></li>
     <li>v4 — Changed 2 key projects and hard skills</li>
     <li>v3 — Fixed mistakes in English grammar</li>
     <li>v2 — Made small changes to soft skills section</li>

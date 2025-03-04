@@ -4,10 +4,10 @@
 
 <section class="links">
   <div class="cards">
-    <Card title='Resume' subtitle='My single-page resume/CV in English, compressed to 5 MB' button={{ label: 'Open', url: '/v4/En-optimized.pdf' }} />
-    <Card title='Resume (27,5 MB)' subtitle={'The same PDF file, but it\'s exported from Figma without optimization'} button={{ label: 'Open', url: '/v4/En.pdf' }} />
-    <Card title='Резюме' subtitle='Одностраничное резюме/CV на русском, сжатое до 5 МБ' button={{ label: 'Открыть', url: '/v4/Ru-optimized.pdf' }} />
-    <Card title='Резюме (27,5 MB)' subtitle={'Тот же PDF файл, но он экспортирован из Figma без сжатия'} button={{ label: 'Открыть', url: '/v4/Ru.pdf' }} />
+    <Card title='Resume' subtitle='My single-page colorful resume made in Figma' button={{ label: 'Open', url: '/v5/en/Viktor-Shchelochkov-Resume.pdf' }} />
+    <Card title='CV' subtitle='My boring CV written in the most corporate way possible' button={{ label: 'Open', url: '/v5/en/Viktor-Shchelochkov-CV.pdf' }} />
+    <Card title='Резюме' subtitle='Мое одностраничное веселое цветное резюме' button={{ label: 'Открыть', url: '/v5/ru/Виктор-Щелочков-Резюме.pdf' }} />
+    <Card title='CV' subtitle='Мое скучное CV, написанное максимально формально' button={{ label: 'Открыть', url: '/v5/ru/Виктор-Щелочков-CV.pdf' }} />
   </div>
 </section>
 
