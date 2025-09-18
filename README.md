@@ -12,4 +12,5 @@
 ## License
 
 Code: [MIT](./LICENSE)
+
 PDFs (under static/v5): [CC-BY-4.0](./static/v5/LICENSE)
