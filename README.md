@@ -8,3 +8,8 @@
 2025: Rebuilt with Vite, Svelte, SvelteKit, TypeScript; SCSS, similar components; I used Prettier and eslint.
 
 2023: Built with Vite, React, TypeScript; SCSS modules, components inspired by @shadcn/ui's; FSD architecture in 1 hour (I even managed to get in time with last commit). Quick coding with help of GitHub copilot, my own snippets and strict workflow with my own VSCode extensions etc.
+
+## License
+
+Code: [MIT](./LICENSE)
+PDFs (under static/v5): [CC-BY-4.0](./static/v5/LICENSE)
