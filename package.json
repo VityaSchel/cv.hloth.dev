@@ -1,7 +1,7 @@
 {
 	"name": "cv.hloth.dev",
-	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev/)",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
