@@ -7,7 +7,7 @@
   let { title, subtitle, buttons, preview, highlight }: {
     title: string
     subtitle: string
-    buttons: { label: string; url: string; variant?: "primary" | "secondary" }[]
+    buttons: { label: string; url: string; variant?: "primary" | "secondary"; download?: boolean }[]
     preview: { src: string; width: number; height: number }
     highlight?: boolean
   } = $props()
@@ -28,7 +28,7 @@
     </div>
     <div class="actions-box">
       {#each buttons as button}
-        <a href={button.url} target="_blank" rel="noreferrer nofollow">
+        <a href={button.url} target="_blank" rel="noreferrer nofollow" download={button.download ? "" : undefined}>
           <Button tabindex={-1} variant={button.variant}>{button.label}</Button>
         </a>
       {/each}
