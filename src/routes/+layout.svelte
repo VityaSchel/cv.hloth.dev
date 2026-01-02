@@ -13,10 +13,9 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 100vh;
-		padding: 64px 0;
+		padding: 32px;
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 2rem;
 		// text-align: center;
 
 		@media screen and (max-width: 1024px) {
@@ -25,6 +24,10 @@
 
 		@media screen and (max-width: 900px) {
 			flex-direction: column;
+		}
+
+		@media screen and (max-width: 400px) {
+			padding: 16px;
 		}
 	}
 </style>

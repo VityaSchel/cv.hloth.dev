@@ -13,4 +13,4 @@
 
 Code: [MIT](./LICENSE)
 
-PDFs (under static/v6): [CC-BY-4.0](./static/v6/LICENSE)
+PDFs (under static/v7): [CC-BY-4.0](./static/v7/LICENSE)
