@@ -4,10 +4,10 @@
   import Subtitle from "./Subtitle.svelte"
   import Title from "./Title.svelte"
 
-  let { title, subtitle, button, preview, highlight }: {
+  let { title, subtitle, buttons, preview, highlight }: {
     title: string
     subtitle: string
-    button: { label: string; url: string }
+    buttons: { label: string; url: string; variant?: "primary" | "secondary" }[]
     preview: { src: string; width: number; height: number }
     highlight?: boolean
   } = $props()
@@ -27,9 +27,11 @@
       <Subtitle>{subtitle}</Subtitle>
     </div>
     <div class="actions-box">
-      <a href={button.url} target="_blank" rel="noreferrer nofollow">
-        <Button tabindex={-1}>{button.label}</Button>
-      </a>
+      {#each buttons as button}
+        <a href={button.url} target="_blank" rel="noreferrer nofollow">
+          <Button tabindex={-1} variant={button.variant}>{button.label}</Button>
+        </a>
+      {/each}
     </div>
   </div>
   <div class="image">
@@ -70,10 +72,10 @@
 
       .actions-box {
         display: flex;
-        justify-content: space-between;
         padding: 24px;
         padding-top: 0;
         margin-top: auto;
+        gap: 12px;
 
         @media screen and (max-width: 400px) {
           padding: 20px;
