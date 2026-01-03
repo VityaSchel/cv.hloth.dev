@@ -17,7 +17,7 @@
     <Card
       title="CV"
       subtitle="My boring CV written in the most corporate way possible"
-      buttons={[{ label: 'Open', url: '/v7/Viktor-Shchelochkov-CV.pdf', variant: 'primary' }]}
+      buttons={[{ label: 'Open', url: '/v7/Viktor-Shchelochkov-CV.pdf?1', variant: 'primary' }]}
       preview={{ src: '/v7/Viktor-Shchelochkov-CV-preview.avif', width: 128, height: 165 }}
     />
   </div>

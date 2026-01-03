@@ -6,7 +6,7 @@
 <aside class="changelog">
   <Heading>Changelog</Heading>
   <ul>
-    <li>v7 — New design and image previews <Date at={1767385108000} /></li>
+    <li>v7 — New design, CV and image previews <Date at={1767385108000} /></li>
     <li>v6 — New version of resume & removed Russian translation <Date at={1759174359000} /></li>
     <li>v5 — Rebuilt with Svelte & added CV <Date at={1741002612000} /></li>
     <li>v4 — Changed 2 key projects and hard skills</li>
