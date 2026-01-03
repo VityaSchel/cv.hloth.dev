@@ -14,5 +14,6 @@
     margin: 0;
     margin-top: 6px;
     color: var(--subtitle-color);
+    transition: color var(--theme-transition-duration) var(--theme-transition-easing);
   }
 </style>

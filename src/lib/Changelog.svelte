@@ -25,6 +25,7 @@
     flex-direction: column;
     gap: 8px;
     color: var(--text-color);
+    transition: border-color var(--theme-transition-duration) var(--theme-transition-easing), color var(--theme-transition-duration) var(--theme-transition-easing);
 
     @media screen and (max-width: 1024px) {
       margin-left: 0px;

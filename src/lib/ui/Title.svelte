@@ -14,5 +14,6 @@
     tab-size: 4;
     margin: 0;
     color:  var(--text-color);
+    transition: color var(--theme-transition-duration) var(--theme-transition-easing);
   }
 </style>

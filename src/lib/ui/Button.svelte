@@ -27,8 +27,7 @@
     
     background-color: var(--card-background);
     color: var(--text-color);
-    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color, color;
+    transition: background-color var(--theme-transition-duration) var(--theme-transition-easing), color var(--theme-transition-duration) var(--theme-transition-easing), border-color var(--theme-transition-duration) var(--theme-transition-easing);
     
     &.primary {
       border: 1px solid var(--button-border);

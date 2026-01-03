@@ -21,7 +21,11 @@ a {
 }
 
 :root {
+  --theme-transition-duration: 0.15s;
+  --theme-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
   background-color: var(--card-background);
+  transition: background-color var(--theme-transition-duration) var(--theme-transition-easing), color var(--theme-transition-duration) var(--theme-transition-easing);
 
   --border-color: #eee;
   --card-background: rgb(255, 255, 255);

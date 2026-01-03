@@ -19,7 +19,7 @@
 <div class="card">
   {#if highlight}
     <CardHighlight />
-    <svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="highlight-corner"><path d="M2.554 1.899a2 2 0 0 1 3.799 1.255L4.426 8.986A2 2 0 0 1 .627 7.732zM12.235 4.8a2 2 0 0 1 2.922 2.731l-4.806 5.143a2 2 0 1 1-2.922-2.731zm6.236 8.12a2 2 0 0 1 1.263 3.796l-6.423 2.137a2 2 0 1 1-1.263-3.795z" fill="#fff" /></svg>
+    <svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="highlight-corner"><path d="M2.554 1.899a2 2 0 0 1 3.799 1.255L4.426 8.986A2 2 0 0 1 .627 7.732zM12.235 4.8a2 2 0 0 1 2.922 2.731l-4.806 5.143a2 2 0 1 1-2.922-2.731zm6.236 8.12a2 2 0 0 1 1.263 3.796l-6.423 2.137a2 2 0 1 1-1.263-3.795z" fill="currentColor" /></svg>
   {/if}
   <div class="content">
     <div class="top">
@@ -51,6 +51,7 @@
     box-shadow: var(--card-shadow-color) 0px 1px 2px 0px;
     min-width: 320px;
     position: relative;
+    transition: background-color var(--theme-transition-duration) var(--theme-transition-easing), color var(--theme-transition-duration) var(--theme-transition-easing), border-color var(--theme-transition-duration) var(--theme-transition-easing);
 
     @media screen and (max-width: 400px) {
       border-radius: 16px;
