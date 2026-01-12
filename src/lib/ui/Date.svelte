@@ -17,5 +17,6 @@
   span {
     font-family: monospace;
     color: #5c5c5c;
+    white-space: nowrap;
   }
 </style>

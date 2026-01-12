@@ -6,6 +6,7 @@
 <aside class="changelog">
   <Heading>Changelog</Heading>
   <ul>
+    <li>v8 — Merge CV and resume, replace unneccessary details with key experience <Date at={1768221254000} /></li>
     <li>v7 — New design, CV and image previews <Date at={1767385108000} /></li>
     <li>v6 — New version of resume & removed Russian translation <Date at={1759174359000} /></li>
     <li>v5 — Rebuilt with Svelte & added CV <Date at={1741002612000} /></li>
@@ -21,6 +22,7 @@
     padding: 32px 16px;
     border-left: 1px solid var(--border-color);
     margin-left: 128px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -39,7 +41,10 @@
         font-size: 11px;
     
         li {
-          line-height: 24px;
+
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
         }
       }
   }

@@ -8,17 +8,11 @@
       title="Resume"
       subtitle="My single-page colorful resume made in Figma"
       buttons={[
-        { label: 'Open', url: '/v7/Viktor-Shchelochkov-Resume.avif', variant: 'primary' },
-        { label: 'Open as PDF', url: '/v7/Viktor-Shchelochkov-Resume.pdf', variant: 'secondary', download: true }
+        { label: 'Open', url: '/v8/Viktor-Shchelochkov-Resume.avif', variant: 'primary' },
+        { label: 'Open as PDF', url: '/v8/Viktor-Shchelochkov-Resume.pdf', variant: 'secondary', download: true }
       ]}
-      preview={{ src: '/v7/Viktor-Shchelochkov-Resume-preview.avif', width: 128, height: 181 }}
+      preview={{ src: '/v8/Viktor-Shchelochkov-Resume-preview.avif', width: 128, height: 181 }}
       highlight
-    />
-    <Card
-      title="CV"
-      subtitle="My boring CV written in the most corporate way possible"
-      buttons={[{ label: 'Open', url: '/v7/Viktor-Shchelochkov-CV.pdf?1', variant: 'primary' }]}
-      preview={{ src: '/v7/Viktor-Shchelochkov-CV-preview.avif', width: 128, height: 165 }}
     />
   </div>
 </section>
