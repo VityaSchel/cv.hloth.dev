@@ -1,5 +1,9 @@
-<script>
+<script lang="ts">
 	import Resume from "./Resume.svelte";
+	import Nav from "./Nav.svelte";
+	import type { PageProps } from "./$types";
+
+	let { data }: PageProps = $props();
 
 	const title = "Viktor Shchelochkov resume & CV";
 	const description = "Visit the website to download Viktor Shchelochkov aka hloth's resume & CV";
@@ -16,3 +20,4 @@
 <main class="w-full py-8">
 	<Resume />
 </main>
+<Nav downloadOptions={data.downloadOptions} />
