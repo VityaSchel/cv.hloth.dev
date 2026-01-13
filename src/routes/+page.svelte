@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Resume from "./Resume.svelte";
-	import Nav from "./Nav.svelte";
+	import Resume from "$lib/components/Resume.svelte";
+	import Nav from "@/components/nav/Nav.svelte";
 	import type { PageProps } from "./$types";
 
 	let { data }: PageProps = $props();

@@ -13,7 +13,7 @@
 			<img
 				src="/{resumeVersion}/Viktor-Shchelochkov-Resume.jpeg"
 				alt="Resume background"
-				class="absolute top-0 left-0 z-1 size-full text-[0px] backdrop-blur-sm"
+				class="pointer-events-none absolute top-0 left-0 z-1 size-full text-[0px] backdrop-blur-sm select-none"
 				loading="lazy"
 				decoding="async"
 			/>
