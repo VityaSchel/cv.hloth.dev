@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+	color-scheme: dark;
+	background-color: #121212;
+}
+
+.container-inline {
+	container-type: inline-size;
+}

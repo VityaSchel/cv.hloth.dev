@@ -1,33 +1,14 @@
 <script lang="ts">
-	import '../app.css'
-	let { children } = $props()
+	import "./layout.css";
+
+	let { children } = $props();
 </script>
 
-<main class="wrapper">
-	{@render children()}
-</main>
-
-<style lang="scss">
-	.wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-		padding: 32px;
-		max-width: 1280px;
-		margin: 0 auto;
-		// text-align: center;
-
-		@media screen and (max-width: 1024px) {
-			justify-content: space-evenly;
-		}
-
-		@media screen and (max-width: 900px) {
-			flex-direction: column;
-		}
-
-		@media screen and (max-width: 400px) {
-			padding: 16px;
-		}
-	}
-</style>
+<svelte:head>
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+</svelte:head>
+{@render children()}
