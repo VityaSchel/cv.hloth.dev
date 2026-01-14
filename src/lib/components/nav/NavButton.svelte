@@ -69,7 +69,7 @@
 >
 	{@render icon?.()}
 	<span
-		class="overflow-clip mask-r-from-(--mask-width)"
+		class="inline-block overflow-clip mask-r-from-(--mask-width)"
 		style="
 			width: {labelWidth ? context.pLowCapped * labelWidth + 'px' : 'auto'};
 			--mask-width: {context.pLowCapped * 100}%;

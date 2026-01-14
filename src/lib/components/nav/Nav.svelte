@@ -34,16 +34,29 @@
 		precision: 0.01
 	});
 
+	let scrollVelocity = new Spring(0, { stiffness: 0.3, damping: 0.5 });
+
 	$effect(() => {
 		const prev = untrack(() => prevScrollY);
-		if (scrollY !== undefined) {
-			if (prev !== undefined) {
-				expandProgress.target = scrollY < prev ? 1 : 0;
-				// TODO: set stiffness and damping based on scroll delta?
-			}
-			prevScrollY = scrollY;
+		if (scrollY !== undefined && prev !== undefined) {
+			const delta = scrollY - prev;
+			scrollVelocity.target = delta;
 		}
+		prevScrollY = scrollY;
 	});
+
+	$effect(() => {
+		const velocity = Math.abs(scrollVelocity.current);
+
+		const velocityThreshold = 50;
+		const velocityMult = Math.min(velocity / velocityThreshold, 1);
+
+		expandProgress.damping = 0.15 + (1 - velocityMult) * 0.15;
+		expandProgress.stiffness = 0.08 + velocityMult * 0.04;
+
+		expandProgress.target = scrollVelocity.current < 0 ? 1 : 0;
+	});
+
 	let p = $derived(expandProgress.current);
 	let pLowCapped = $derived(Math.max(0, p));
 	let pClamped = $derived(Math.min(pLowCapped, 1));
@@ -63,7 +76,7 @@
 	setNavContext(context);
 
 	const xStretchMult = 0.65;
-	const yStretchMult = 0.75;
+	const yStretchMult = 0.8;
 	const overstretch = $derived(Math.max(0, pLowCapped - 1));
 	const xStretch = $derived(1 + overstretch * xStretchMult);
 	const yStretch = $derived(1 + overstretch * yStretchMult);
