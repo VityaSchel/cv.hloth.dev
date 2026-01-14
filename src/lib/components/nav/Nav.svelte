@@ -30,7 +30,7 @@
 	let prevScrollY: undefined | number = $state(undefined);
 	let expandProgress = new Spring(1, {
 		stiffness: 0.1,
-		damping: 0.25,
+		damping: 0.2,
 		precision: 0.01
 	});
 
@@ -61,6 +61,12 @@
 	});
 
 	setNavContext(context);
+
+	const xStretchMult = 0.65;
+	const yStretchMult = 0.75;
+	const overstretch = $derived(Math.max(0, pLowCapped - 1));
+	const xStretch = $derived(1 + overstretch * xStretchMult);
+	const yStretch = $derived(1 + overstretch * yStretchMult);
 </script>
 
 <svelte:window
@@ -72,7 +78,7 @@
 <nav class="fixed bottom-0 left-0 z-50 flex w-full justify-center">
 	<div class="flex w-full max-w-297.5 justify-end p-2">
 		<div
-			class="flex gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
+			class="flex origin-right scale-x-(--scale-x) scale-y-(--scale-y) gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
 			style="
 				--bg: color-mix(
 					in oklab,
@@ -83,6 +89,8 @@
 					) {30 + pClamped * 10}%,
 					transparent
 				);
+				--scale-x: {xStretch * 100}%;
+				--scale-y: {100 / yStretch}%;
 			"
 		>
 			<NavMenu bind:open={menus.contact} label="Contact">
