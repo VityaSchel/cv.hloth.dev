@@ -1,9 +1,9 @@
 import { createContext } from "svelte";
 
 export class NavContext {
-	p = $state(0);
-	pLowCapped = $state(0);
-	pClamped = $state(0);
+	p = $state(1);
+	pLowCapped = $state(1);
+	pClamped = $state(1);
 }
 
 export const [getNavContext, setNavContext] = createContext<NavContext>();

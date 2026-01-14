@@ -20,7 +20,7 @@
 	data-inset={inset}
 	data-variant={variant}
 	class={cn(
-		"data-highlighted:bg-accent data-highlighted:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:data-highlighted:bg-destructive/10 dark:data-[variant=destructive]:data-highlighted:bg-destructive/20 data-[variant=destructive]:data-highlighted:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:ps-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+		"relative flex h-8 cursor-default items-center gap-2 rounded-2xl border px-4 py-1.5 text-sm font-medium tracking-tight text-foreground-soft/90 outline-hidden select-none not-focus-visible:border-accent-foreground/15 focus-visible:border-foreground focus-visible:bg-foreground/20 data-highlighted:text-accent-foreground data-highlighted:not-focus-visible:bg-accent/20 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:ps-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:data-highlighted:bg-destructive/10 data-[variant=destructive]:data-highlighted:text-destructive dark:data-[variant=destructive]:data-highlighted:bg-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground-soft/90 data-highlighted:[&_svg:not([class*='text-'])]:text-accent-foreground data-[variant=destructive]:*:[svg]:!text-destructive ",
 		className
 	)}
 	{...restProps}

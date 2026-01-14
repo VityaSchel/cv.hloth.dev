@@ -1,30 +1,59 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
+	import { Spring } from "svelte/motion";
 	import { getNavContext } from "./nav-context.svelte";
 
 	let {
 		icon,
 		children,
+		accent,
+		highlighted,
+		...props
 	}: {
 		icon?: import("svelte").Snippet;
 		children?: import("svelte").Snippet;
-	} = $props();
+		accent?: boolean;
+		highlighted?: boolean;
+	} & import("svelte").ComponentProps<typeof Button> = $props();
 
 	const context = getNavContext();
 
-	let labelWidth = $state(0);
+	let highlightProgress = new Spring(0, {
+		stiffness: 0.1,
+		damping: 0.25,
+		precision: 0.01
+	});
+	let labelWidth: number | undefined = $state();
+
+	$effect(() => {
+		highlightProgress.target = highlighted ? 1 : 0;
+	});
+
+	const hpClamped = $derived(Math.min(Math.max(highlightProgress.current, 0), 1));
 </script>
 
 <Button
-	class="cursor-pointer gap-0 border border-input/(--border-opacity) bg-primary/(--bg-opacity) px-(--padding-inline)! transition-none hover:bg-(--hover-bg)"
+	class="cursor-pointer gap-0 border border-input/(--border-opacity) px-(--padding-inline)! transition-none hover:bg-(--hover-bg)"
 	style="
-		--bg-opacity: {context.pClamped * 100}%;
+		background-color: color-mix(
+			in oklab,
+			color-mix(
+				in oklab,
+				var(--primary) {accent ? context.pClamped * 100 : 0}%,
+				var(--input) {accent ? (1 - context.pClamped) * 100 : 100}%
+			) 100%,
+			transparent
+		);
 		color: color-mix(
 			in oklab,
-			var(--primary-foreground) {context.pClamped * 100}%,
-			color-mix(in oklab, var(--color-neutral-100) 80%, transparent)
+			black {accent ? hpClamped * context.pClamped * 100 : 0}%,
+			color-mix(
+				in oklab,
+				var(--primary-foreground) {accent ? context.pClamped * 100 : 0}%,
+				color-mix(in oklab, var(--color-neutral-100) {80 + hpClamped * 20}%, transparent)
+			)
 		);
-		--border-opacity: {(1 - context.pClamped) * 100}%;
+		--border-opacity: {accent ? (1 - context.pClamped) * 100 : 100}%;
 		--padding-inline: {9 + context.p * 7}px;
 		--hover-bg: color-mix(
 			in oklab,
@@ -36,12 +65,13 @@
 			transparent
 		);
 	"
+	{...props}
 >
 	{@render icon?.()}
 	<span
 		class="overflow-clip mask-r-from-(--mask-width)"
 		style="
-			width: {context.pLowCapped * labelWidth}px;
+			width: {labelWidth ? context.pLowCapped * labelWidth + 'px' : 'auto'};
 			--mask-width: {context.pLowCapped * 100}%;
 		"
 	>
