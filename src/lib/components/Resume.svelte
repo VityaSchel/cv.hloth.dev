@@ -16,14 +16,16 @@
 				class="pointer-events-none absolute top-0 left-0 z-1 size-full text-[0px] backdrop-blur-sm select-none"
 				loading="lazy"
 				decoding="async"
+				draggable="false"
 			/>
 		</picture>
 		<img
 			src={preview}
 			alt=""
-			class="animate-loading absolute top-0 left-0 z-0 size-full"
+			class="animate-loading pointer-events-none absolute top-0 left-0 z-0 size-full"
 			role="presentation"
 			aria-hidden="true"
+			draggable="false"
 		/>
 	</div>
 </div>
