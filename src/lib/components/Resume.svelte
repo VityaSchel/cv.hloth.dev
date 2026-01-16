@@ -34,59 +34,59 @@
 		/>
 	</div>
 	<div
-		class="absolute top-0 left-0 z-1 flex h-full w-full flex-col gap-[calc(24*var(--cqw))] p-[calc(32*var(--cqw))] pt-[calc(88*var(--cqw))] [&_div]:bg-foreground-soft/20"
+		class="frame absolute top-0 left-0 z-1 flex size-full flex-col gap-[cqw(24)] p-[cqw(32)] pt-[cqw(88)] [&_div]:bg-foreground-soft/0"
 	>
-		<div class="flex h-[calc(404*var(--cqw))] w-full gap-[calc(24*var(--cqw))]">
-			<div
-				class="flex w-[calc(761*var(--cqw))] flex-col gap-[calc(32*var(--cqw))] px-[calc(44*var(--cqw))] py-[calc(36*var(--cqw))]"
-			>
-				<div class="flex h-[calc(178*var(--cqw))] flex-col gap-[calc(16*var(--cqw))]">
-					<div class="flex h-[calc(110*var(--cqw))] w-full flex-col gap-[calc(10*var(--cqw))]">
-						<h1 class="h-[calc(67*var(--cqw))] w-full text-[calc(56*var(--cqw))]">
-							Viktor Shchelochkov
-						</h1>
-						<div class="flex h-[calc(33*var(--cqw))] items-center justify-between">
-							<h2 class="text-[calc(28*var(--cqw))]">Senior full stack web developer</h2>
-							<div class="flex h-[calc(26*var(--cqw))] items-center gap-[calc(10*var(--cqw))]">
-								<GeoPinIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
-								<span class="text-[calc(22*var(--cqw))]">Barcelona, Spain</span>
+		<div class="flex h-[cqw(404)] w-full gap-[cqw(24)]">
+			<div class="flex w-[cqw(761)] flex-col gap-[cqw(32)] px-[cqw(44)] py-[cqw(36)]">
+				<div class="flex h-[cqw(178)] flex-col gap-[cqw(16)]">
+					<div class="flex h-[cqw(110)] w-full flex-col gap-[cqw(10)]">
+						<h1 class="name h-[cqw(67)] w-full fs-56 leading-[cqw(67)]">Viktor Shchelochkov</h1>
+						<div class="flex h-[cqw(33)] items-center justify-between">
+							<h2 class="role fs-28 font-semibold capitalize">Senior full stack web developer</h2>
+							<div class="flex h-[cqw(26)] items-center gap-[cqw(10)]">
+								<GeoPinIcon class="size-[cqw(16)]" />
+								<span class="location pr-[cqw(6)] fs-22">Barcelona, Spain</span>
 							</div>
 						</div>
 					</div>
-					<p class="w-full text-[calc(22*var(--cqw))]">
+					<p class="intro h-[cqw(52)] w-full fs-22 leading-[cqw(26)]">
 						I’ve been creating progressive web applications that work everywhere and designing
 						websites accessible for everyone for over 5 years
 					</p>
 				</div>
-				<div
-					class="flex flex-col gap-[calc(6*var(--cqw))] text-[calc(22*var(--cqw))] [&_div]:flex [&_div]:h-[calc(26*var(--cqw))] [&_div]:items-center [&_div]:gap-[calc(10*var(--cqw))]"
-				>
+				<div class="contacts flex flex-col gap-[cqw(6)] fs-22">
 					<div>
-						<GlobeIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
-						<a href="https://hloth.dev">hloth.dev</a>
+						<GlobeIcon class="size-[cqw(16)]" />
+						<span>
+							<a href="https://hloth.dev">hloth.dev</a>
+						</span>
 					</div>
 					<div>
-						<EmailIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
-						<a href="mailto:hi@hloth.dev">hi@hloth.dev</a>
+						<EmailIcon class="size-[cqw(16)]" />
+						<span>
+							<a href="mailto:hi@hloth.dev">hi@hloth.dev</a>
+						</span>
 					</div>
 					<div>
-						<MessageIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
-						Matrix:
-						<a href="https://matrix.to/#/@hloth:hloth.dev">@hloth:hloth.dev</a>
+						<MessageIcon class="size-[cqw(16)]" />
+						<span>
+							Matrix:
+							<a href="https://matrix.to/#/@hloth:hloth.dev">@hloth:hloth.dev</a>
+						</span>
 					</div>
 					<div>
-						<LinkedIn class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
-						LinkedIn: <a href="https://www.linkedin.com/in/hloth/">in/hloth</a>
+						<LinkedIn class="size-[cqw(16)]" />
+						<span>
+							LinkedIn: <a href="https://www.linkedin.com/in/hloth/">in/hloth</a>
+						</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div
-			class="flex h-[calc(462*var(--cqw))] w-full flex-col gap-[calc(24*var(--cqw))] px-[calc(32*var(--cqw))] py-[calc(28*var(--cqw))]"
-		>
-			<h2 class="section-title">Work Experience</h2>
+		<div class="flex h-[cqw(462)] w-full flex-col gap-[cqw(24)] px-[cqw(32)] py-[cqw(28)]">
+			<h2 class="section-title">Work experience</h2>
 			<div
-				class="work-experience-section grid h-[calc(349*var(--cqw))] w-full grid-cols-2 grid-rows-3 gap-[calc(16*var(--cqw))]"
+				class="work-experience-section grid h-[cqw(349)] w-full grid-cols-2 grid-rows-3 gap-[cqw(16)]"
 			>
 				<div>
 					<div>
@@ -135,9 +135,9 @@
 						<h4><a href="https://hloth.dev/showcase/lufin">Freelance jobs</a></h4>
 						<span>05/2022—10/2024</span>
 					</div>
-					<span
-						>Full Stack Developer, System Administrator, Frontend Developer, Backend developer</span
-					>
+					<span>
+						Full Stack Developer, System Administrator, Frontend Developer, Backend developer
+					</span>
 					<p>
 						I implemented several micro frontends, analytics views based on 2M+ rows and GBs of raw
 						data, charts for B2B, created a browser extension scraping pages, added AI to auto tag
@@ -170,19 +170,19 @@
 					<p>
 						I created a Figma plugin using Webpack and React that made it much easier for Joom’s
 						designers to create cross-platform UI design. Implemented OAuth that connects to team’s
-						self hosted components library, resulting in a 50% more efficient and faster layout
+						self&nbsp;hosted components library, resulting in a 50% more efficient and faster layout
 						designing
 					</p>
 				</div>
 			</div>
 		</div>
-		<div class="flex h-[calc(650*var(--cqw))] w-full gap-[calc(24*var(--cqw))]">
+		<div class="flex h-[cqw(650)] w-full gap-[cqw(24)]">
 			<div
-				class="flex w-[calc(716*var(--cqw))] flex-col gap-[calc(24*var(--cqw))] px-[calc(32*var(--cqw))] py-[calc(28*var(--cqw))] hard-skills-section"
+				class="hard-skills-section flex w-[cqw(716)] flex-col gap-[cqw(24)] py-[cqw(28)] pr-[cqw(30)] pl-[cqw(32)]"
 			>
 				<h2 class="section-title">Hard skills</h2>
 				<div
-					class="stack grid h-[calc(317*var(--cqw))] w-full grid-cols-2 grid-rows-5 gap-x-[calc(12*var(--cqw))] gap-y-[calc(16*var(--cqw))]"
+					class="stack grid h-[cqw(317)] w-full grid-cols-2 grid-rows-5 gap-x-[cqw(11)] gap-y-[cqw(16)] pb-[cqw(3)]"
 				>
 					<div>
 						<h3>React & Next.js</h3>
@@ -255,7 +255,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="claims flex h-[calc(192*var(--cqw))] flex-col gap-[calc(16*var(--cqw))]">
+				<div class="claims flex h-[cqw(192)] flex-col gap-[cqw(16)]">
 					<p>
 						I have over 200 public repositories with free, libre, open source software on <a
 							href="https://github.com/VityaSchel">my GitHub</a
@@ -278,9 +278,9 @@
 					</p>
 				</div>
 			</div>
-			<div class="flex w-[calc(386*var(--cqw))] flex-col gap-[calc(24*var(--cqw))]">
+			<div class="flex w-[cqw(386)] flex-col gap-[cqw(24)]">
 				<div
-					class="grid h-[calc(382*var(--cqw))] w-full grid-cols-2 grid-rows-2 gap-[calc(2*var(--cqw))] p-[calc(2*var(--cqw))]"
+					class="soft-skills-section grid h-[cqw(382)] w-full grid-cols-2 grid-rows-2 gap-[cqw(2)] p-[cqw(2)]"
 				>
 					<p>
 						I prioritize ergonomic tools for efficiency, use time-management tools and accurately
@@ -300,29 +300,29 @@
 					</p>
 				</div>
 				<div
-					class="other-section flex h-[calc(244*var(--cqw))] flex-col gap-[calc(10*var(--cqw))] px-[calc(26*var(--cqw))] py-[calc(24*var(--cqw))]"
+					class="other-section flex h-[cqw(244)] flex-col gap-[cqw(10)] px-[cqw(26)] py-[cqw(24)]"
 				>
-					<div class="h-[calc(48*var(--cqw))]">
+					<div class="h-[cqw(48)]">
 						<h4>High School Equivalent</h4>
-						<p>
+						<p class="tracking-[-0.015em]">
 							Opted for career advancement instead of pursuing higher education, independently
 							mastered IT skills
 						</p>
 					</div>
-					<div class="h-[calc(35*var(--cqw))]">
+					<div class="h-[cqw(35)]">
 						<h4>Work authorization</h4>
-						<p>Authorized to work in Spain, have EU bank account</p>
+						<p class="tracking-[-0.015em]">Authorized to work in Spain, have EU bank account</p>
 					</div>
-					<div class="h-[calc(48*var(--cqw))]">
+					<div class="h-[cqw(48)]">
 						<h4>Honors & awards</h4>
-						<p>
-							ITMO CYS 04/21, “Clever” IT Hackathon (gold) 11/20, “Potential” (2nd) 12/21,ITMO CYS
+						<p class="tracking-[-0.025em]">
+							ITMO CYS 04/21, “Clever” IT Hackathon (gold) 11/20, “Potential” (2nd) 12/21, ITMO CYS
 							IX 04/20, ITMO Open Code (diploma) 04/19
 						</p>
 					</div>
-					<div class="h-[calc(35*var(--cqw))]">
+					<div class="h-[cqw(35)]">
 						<h4>Ready to relocate</h4>
-						<p>Within Spain or Western Europe</p>
+						<p class="tracking-[-0.015em]">Within Spain or Western Europe</p>
 					</div>
 				</div>
 			</div>
@@ -331,7 +331,7 @@
 </div>
 
 <style lang="postcss">
-	@reference "tailwindcss";
+	@reference "../../routes/layout.css";
 
 	.fix-corner-radius-blur {
 		clip-path: inset(0 round 1px);
@@ -352,48 +352,153 @@
 		}
 	}
 
+	.frame {
+		font-family:
+			"SF Pro",
+			-apple-system,
+			BlinkMacSystemFont,
+			system-ui,
+			Inter,
+			Roboto,
+			sans-serif;
+
+		.name {
+			font-variation-settings:
+				"wdth" 132,
+				"wght" 760,
+				"opsz" 28;
+			white-space: nowrap;
+			letter-spacing: -0.005em;
+		}
+
+		.role {
+			/* top: 1;
+			bottom: 0;
+			haha funny nevermind */
+			font-variation-settings:
+				"wdth" 100,
+				"wght" 590,
+				"opsz" 28;
+			letter-spacing: -0.01em;
+		}
+
+		.intro {
+			font-variation-settings:
+				"wdth" 100,
+				"wght" 400,
+				"opsz" 22;
+			letter-spacing: 0.009em;
+		}
+
+		.location {
+			font-variation-settings:
+				"wdth" 60,
+				"wght" 650,
+				"opsz" 22;
+			letter-spacing: 0.015em;
+		}
+
+		.contacts {
+			font-variation-settings:
+				"wdth" 60,
+				"wght" 650,
+				"opsz" 22;
+			letter-spacing: 0.02em;
+
+			a {
+				text-decoration: underline;
+				text-underline-offset: 5%;
+				text-decoration-thickness: 5%;
+			}
+		}
+	}
 	.section-title {
-		@apply h-[calc(33*var(--cqw))] w-full text-[calc(28*var(--cqw))];
+		@apply h-[cqw(33)] w-full fs-28 tracking-normal capitalize;
+		font-variation-settings:
+			"wdth" 132,
+			"wght" 540,
+			"opsz" 28;
+		line-height: cqw(33);
+		letter-spacing: -0.01em;
+	}
+	.contacts {
+		& > div {
+			@apply flex h-[cqw(26)] items-center gap-[cqw(10)];
+		}
 	}
 	.work-experience-section {
 		h4 {
-			@apply text-[calc(16*var(--cqw))];
+			@apply fs-16 leading-[cqw(19)] font-[510];
+			font-variation-settings:
+				"wdth" 100,
+				"wght" 510,
+				"opsz" 17;
+			letter-spacing: 0.0075em;
+
+			a {
+				text-decoration: underline;
+				text-underline-offset: 11%;
+				text-decoration-thickness: 6.5%;
+			}
 		}
 		& > div {
-			@apply flex flex-col gap-[calc(4*var(--cqw))] p-[calc(12*var(--cqw))];
+			@apply flex flex-col gap-[cqw(4)] p-[cqw(12)] pr-[cqw(11)];
 			& > p {
-				@apply text-[calc(11*var(--cqw))];
+				@apply fs-11 leading-[cqw(13)] tracking-[-0.0054em];
 			}
 			& > span {
-				@apply text-[calc(12*var(--cqw))];
+				@apply fs-12 leading-[cqw(14)] font-medium italic;
 			}
 		}
 		& > div > div {
 			@apply flex items-center justify-between;
 			& > span {
-				@apply text-[calc(14*var(--cqw))];
+				@apply fs-14 leading-[cqw(17)] font-semibold;
+				letter-spacing: 0.01em;
 			}
 			& + span {
-				@apply mb-[calc(2*var(--cqw))];
+				@apply mb-[cqw(2)];
 			}
 		}
 	}
 	.hard-skills-section {
 		.stack div {
-			@apply flex flex-col gap-[calc(3*var(--cqw))] pl-[calc(52*var(--cqw))];
-		}
-		.claims {
-			& > p {
-				@apply h-[calc(36*var(--cqw))] pl-[calc(36*var(--cqw))];
+			@apply flex flex-col gap-[cqw(3)] pl-[cqw(52)];
+			h3 {
+				@apply fs-18 leading-[cqw(21)] font-bold tracking-[0.02em];
 			}
+			p {
+				@apply fs-11 leading-[cqw(13)] tracking-[-0.015em];
+			}
+		}
+		.claims > p {
+			@apply h-[cqw(36)] pl-[cqw(36)] fs-15 leading-[cqw(18)] tracking-[-0.007em];
+
+			a {
+				text-decoration: underline;
+				text-underline-offset: 14.5%;
+			}
+		}
+	}
+	.soft-skills-section {
+		p {
+			@apply mt-auto px-[cqw(8)] pb-[cqw(12)] text-center fs-9 leading-[cqw(10)];
+			font-variation-settings:
+				"wdth" 100,
+				"wght" 510,
+				"opsz" 17;
+			letter-spacing: -0.015em;
 		}
 	}
 	.other-section {
 		div {
-			@apply flex w-full flex-col gap-[calc(3*var(--cqw))];
-		}
-		h4 {
-			@apply pl-[calc(21*var(--cqw))];
+			@apply flex w-full flex-col gap-[cqw(3)];
+			h4 {
+				@apply pl-[cqw(21)] fs-16 leading-[cqw(19)] font-medium tracking-[0.02em];
+			}
+			p {
+				@apply fs-11 leading-[cqw(13)];
+			}
 		}
 	}
 </style>
