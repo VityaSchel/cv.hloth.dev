@@ -131,7 +131,6 @@
 }
 
 @utility fs-* {
-	/* font-size: cqw(--value(integer)); */
 	font-size: calc(var(--cqw) * --value(integer));
 }
 

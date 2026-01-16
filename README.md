@@ -1,9 +1,10 @@
 # [cv.hloth.dev](https://cv.hloth.dev)
 
-[Website](https://cv.hloth.dev) with links to my resume and CV and changelog of these.
+[Website](https://cv.hloth.dev) with [Viktor Shchelochkov's](https://hloth.dev) resume and CV.
 
-![Screenshot](docs/light-mode.webp#gh-light-mode-only)
-![Screenshot](docs/dark-mode.webp#gh-dark-mode-only)
+![Screenshot](docs/dark-mode.avif)
+
+2026: Rebuilt with Vite, Svelte & SvelteKit, TypeScript; TailwindCSS; Prettier & ESLint for development.
 
 2025: Rebuilt with Vite, Svelte & SvelteKit, TypeScript; SCSS, TailwindCSS; Prettier & ESLint for development.
 
@@ -13,4 +14,4 @@
 
 Code: [MIT](./LICENSE)
 
-PDFs (under static/v7): [CC-BY-4.0](./static/v7/LICENSE)
+PDFs (under static/v8): [CC-BY-4.0](./static/v8/LICENSE)
