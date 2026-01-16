@@ -1,0 +1,7 @@
+{
+	"cqw": {
+		"scope": "svelte",
+		"prefix": "cx",
+		"body": "calc($0*var(--cqw))"
+	}
+}

@@ -42,38 +42,40 @@
 			>
 				<div class="flex h-[calc(178*var(--cqw))] flex-col gap-[calc(16*var(--cqw))]">
 					<div class="flex h-[calc(110*var(--cqw))] w-full flex-col gap-[calc(10*var(--cqw))]">
-						<h1 class="h-[calc(67*var(--cqw))] w-full">Viktor Shchelochkov</h1>
+						<h1 class="h-[calc(67*var(--cqw))] w-full text-[calc(56*var(--cqw))]">
+							Viktor Shchelochkov
+						</h1>
 						<div class="flex h-[calc(33*var(--cqw))] items-center justify-between">
-							<h2>Senior full stack web developer</h2>
+							<h2 class="text-[calc(28*var(--cqw))]">Senior full stack web developer</h2>
 							<div class="flex h-[calc(26*var(--cqw))] items-center gap-[calc(10*var(--cqw))]">
-								<GeoPinIcon width="16" height="16" />
-								<span>Barcelona, Spain</span>
+								<GeoPinIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
+								<span class="text-[calc(22*var(--cqw))]">Barcelona, Spain</span>
 							</div>
 						</div>
 					</div>
-					<p class="w-full">
+					<p class="w-full text-[calc(22*var(--cqw))]">
 						I’ve been creating progressive web applications that work everywhere and designing
 						websites accessible for everyone for over 5 years
 					</p>
 				</div>
 				<div
-					class="flex flex-col gap-[calc(6*var(--cqw))] [&_div]:flex [&_div]:h-[calc(26*var(--cqw))] [&_div]:items-center [&_div]:gap-[calc(10*var(--cqw))]"
+					class="flex flex-col gap-[calc(6*var(--cqw))] text-[calc(22*var(--cqw))] [&_div]:flex [&_div]:h-[calc(26*var(--cqw))] [&_div]:items-center [&_div]:gap-[calc(10*var(--cqw))]"
 				>
 					<div>
-						<GlobeIcon width="16" height="16" />
+						<GlobeIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
 						<a href="https://hloth.dev">hloth.dev</a>
 					</div>
 					<div>
-						<EmailIcon width="16" height="16" />
+						<EmailIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
 						<a href="mailto:hi@hloth.dev">hi@hloth.dev</a>
 					</div>
 					<div>
-						<MessageIcon width="16" height="16" />
+						<MessageIcon class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
 						Matrix:
 						<a href="https://matrix.to/#/@hloth:hloth.dev">@hloth:hloth.dev</a>
 					</div>
 					<div>
-						<LinkedIn width="16" height="16" />
+						<LinkedIn class="h-[calc(16*var(--cqw))] w-[calc(16*var(--cqw))]" />
 						LinkedIn: <a href="https://www.linkedin.com/in/hloth/">in/hloth</a>
 					</div>
 				</div>
@@ -82,9 +84,9 @@
 		<div
 			class="flex h-[calc(462*var(--cqw))] w-full flex-col gap-[calc(24*var(--cqw))] px-[calc(32*var(--cqw))] py-[calc(28*var(--cqw))]"
 		>
-			<h2 class="h-[calc(33*var(--cqw))] w-full">Work Experience</h2>
+			<h2 class="section-title">Work Experience</h2>
 			<div
-				class="grid h-[calc(349*var(--cqw))] w-full grid-cols-2 grid-rows-3 gap-[calc(16*var(--cqw))] [&>div]:flex [&>div]:flex-col [&>div]:gap-[calc(4*var(--cqw))] [&>div]:p-[calc(12*var(--cqw))] [&>div>div]:flex [&>div>div]:items-center [&>div>div]:justify-between [&>div>div+span]:mb-[calc(2*var(--cqw))]"
+				class="work-experience-section grid h-[calc(349*var(--cqw))] w-full grid-cols-2 grid-rows-3 gap-[calc(16*var(--cqw))]"
 			>
 				<div>
 					<div>
@@ -176,11 +178,11 @@
 		</div>
 		<div class="flex h-[calc(650*var(--cqw))] w-full gap-[calc(24*var(--cqw))]">
 			<div
-				class="flex w-[calc(716*var(--cqw))] flex-col gap-[calc(24*var(--cqw))] px-[calc(32*var(--cqw))] py-[calc(28*var(--cqw))]"
+				class="flex w-[calc(716*var(--cqw))] flex-col gap-[calc(24*var(--cqw))] px-[calc(32*var(--cqw))] py-[calc(28*var(--cqw))] hard-skills-section"
 			>
-				<h2 class="h-[calc(33*var(--cqw))] w-full">Hard skills</h2>
+				<h2 class="section-title">Hard skills</h2>
 				<div
-					class="grid h-[calc(317*var(--cqw))] w-full grid-cols-2 grid-rows-5 gap-x-[calc(12*var(--cqw))] gap-y-[calc(16*var(--cqw))] [&_div]:flex [&_div]:flex-col [&_div]:gap-[calc(3*var(--cqw))]"
+					class="stack grid h-[calc(317*var(--cqw))] w-full grid-cols-2 grid-rows-5 gap-x-[calc(12*var(--cqw))] gap-y-[calc(16*var(--cqw))]"
 				>
 					<div>
 						<h3>React & Next.js</h3>
@@ -253,9 +255,7 @@
 						</p>
 					</div>
 				</div>
-				<div
-					class="[&>p]h-[calc(36*var(--cqw))] flex h-[calc(192*var(--cqw))] flex-col gap-[calc(16*var(--cqw))] [&>p]:pl-[calc(36*var(--cqw))]"
-				>
+				<div class="claims flex h-[calc(192*var(--cqw))] flex-col gap-[calc(16*var(--cqw))]">
 					<p>
 						I have over 200 public repositories with free, libre, open source software on <a
 							href="https://github.com/VityaSchel">my GitHub</a
@@ -300,7 +300,7 @@
 					</p>
 				</div>
 				<div
-					class="flex h-[calc(244*var(--cqw))] flex-col gap-[calc(10*var(--cqw))] px-[calc(26*var(--cqw))] py-[calc(24*var(--cqw))] [&_div]:flex [&_div]:w-full [&_div]:flex-col [&_div]:gap-[calc(3*var(--cqw))] [&_h4]:pl-[calc(21*var(--cqw))]"
+					class="other-section flex h-[calc(244*var(--cqw))] flex-col gap-[calc(10*var(--cqw))] px-[calc(26*var(--cqw))] py-[calc(24*var(--cqw))]"
 				>
 					<div class="h-[calc(48*var(--cqw))]">
 						<h4>High School Equivalent</h4>
@@ -330,10 +330,13 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
+	@reference "tailwindcss";
+
 	.fix-corner-radius-blur {
 		clip-path: inset(0 round 1px);
 	}
+
 	.animate-loading {
 		animation: loading 1s ease-in-out forwards infinite;
 	}
@@ -346,6 +349,51 @@
 		}
 		100% {
 			filter: brightness(100%);
+		}
+	}
+
+	.section-title {
+		@apply h-[calc(33*var(--cqw))] w-full text-[calc(28*var(--cqw))];
+	}
+	.work-experience-section {
+		h4 {
+			@apply text-[calc(16*var(--cqw))];
+		}
+		& > div {
+			@apply flex flex-col gap-[calc(4*var(--cqw))] p-[calc(12*var(--cqw))];
+			& > p {
+				@apply text-[calc(11*var(--cqw))];
+			}
+			& > span {
+				@apply text-[calc(12*var(--cqw))];
+			}
+		}
+		& > div > div {
+			@apply flex items-center justify-between;
+			& > span {
+				@apply text-[calc(14*var(--cqw))];
+			}
+			& + span {
+				@apply mb-[calc(2*var(--cqw))];
+			}
+		}
+	}
+	.hard-skills-section {
+		.stack div {
+			@apply flex flex-col gap-[calc(3*var(--cqw))] pl-[calc(52*var(--cqw))];
+		}
+		.claims {
+			& > p {
+				@apply h-[calc(36*var(--cqw))] pl-[calc(36*var(--cqw))];
+			}
+		}
+	}
+	.other-section {
+		div {
+			@apply flex w-full flex-col gap-[calc(3*var(--cqw))];
+		}
+		h4 {
+			@apply pl-[calc(21*var(--cqw))];
 		}
 	}
 </style>
