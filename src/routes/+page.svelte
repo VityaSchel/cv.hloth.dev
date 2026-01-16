@@ -17,7 +17,7 @@
 	<meta property="og:url" content="https://cv.hloth.dev/" />
 </svelte:head>
 
-<main class="w-full py-8">
+<main class="w-full pt-8 pb-17">
 	<Resume />
 </main>
 <Nav downloadOptions={data.downloadOptions} />

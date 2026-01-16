@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="container-inline fix-corner-radius-blur relative m-auto aspect-595/842 h-auto w-full max-w-297.5"
+	class="fix-corner-radius-blur @container relative m-auto aspect-595/842 h-auto w-full max-w-fullsize"
 >
 	<div class="absolute top-0 left-0 size-full overflow-clip rounded-[4.3697479cqw]">
 		<picture>
@@ -304,25 +304,25 @@
 				>
 					<div class="h-[cqw(48)]">
 						<h4>High School Equivalent</h4>
-						<p class="tracking-[-0.015em]">
+						<p class="desc">
 							Opted for career advancement instead of pursuing higher education, independently
 							mastered IT skills
 						</p>
 					</div>
 					<div class="h-[cqw(35)]">
 						<h4>Work authorization</h4>
-						<p class="tracking-[-0.015em]">Authorized to work in Spain, have EU bank account</p>
+						<p class="desc">Authorized to work in Spain, have EU bank account</p>
 					</div>
 					<div class="h-[cqw(48)]">
 						<h4>Honors & awards</h4>
-						<p class="tracking-[-0.025em]">
+						<p class="tight-desc">
 							ITMO CYS 04/21, “Clever” IT Hackathon (gold) 11/20, “Potential” (2nd) 12/21, ITMO CYS
 							IX 04/20, ITMO Open Code (diploma) 04/19
 						</p>
 					</div>
 					<div class="h-[cqw(35)]">
 						<h4>Ready to relocate</h4>
-						<p class="tracking-[-0.015em]">Within Spain or Western Europe</p>
+						<p class="desc">Within Spain or Western Europe</p>
 					</div>
 				</div>
 			</div>
@@ -387,7 +387,7 @@
 				"wdth" 100,
 				"wght" 400,
 				"opsz" 22;
-			letter-spacing: 0.009em;
+			@apply tracking-[-0.045em] @px380:tracking-[-0.035em] @px580:tracking-[-0.01em] @px700:tracking-[0.003em] @px800:tracking-[0.009em];
 		}
 
 		.location {
@@ -428,12 +428,11 @@
 	}
 	.work-experience-section {
 		h4 {
-			@apply fs-16 leading-[cqw(19)] font-[510];
+			@apply fs-16 leading-[cqw(19)] font-[510] tracking-[0.0075em];
 			font-variation-settings:
 				"wdth" 100,
 				"wght" 510,
 				"opsz" 17;
-			letter-spacing: 0.0075em;
 
 			a {
 				text-decoration: underline;
@@ -444,10 +443,10 @@
 		& > div {
 			@apply flex flex-col gap-[cqw(4)] p-[cqw(12)] pr-[cqw(11)];
 			& > p {
-				@apply fs-11 leading-[cqw(13)] tracking-[-0.0054em];
+				@apply fs-11 leading-[cqw(13)] tracking-[-0.045em] @px700:tracking-[-0.035em] @px880:tracking-[-0.025em] @px980:tracking-[-0.0175em] @fullsize:tracking-[-0.0054em];
 			}
 			& > span {
-				@apply fs-12 leading-[cqw(14)] font-medium italic;
+				@apply fs-12 leading-[cqw(14)] font-medium tracking-[-0.03em] italic @px700:tracking-[-0.02em] @px880:tracking-[-0.01em] @fullsize:tracking-normal;
 			}
 		}
 		& > div > div {
@@ -465,14 +464,14 @@
 		.stack div {
 			@apply flex flex-col gap-[cqw(3)] pl-[cqw(52)];
 			h3 {
-				@apply fs-18 leading-[cqw(21)] font-bold tracking-[0.02em];
+				@apply fs-18 leading-[cqw(21)] font-bold tracking-[-0.02em] @px580:tracking-[-0.01em] @px800:tracking-[0.01em] @fullsize:tracking-[0.02em];
 			}
 			p {
-				@apply fs-11 leading-[cqw(13)] tracking-[-0.015em];
+				@apply fs-11 leading-[cqw(13)] tracking-[-0.05em] @px750:tracking-[-0.045em] @px980:tracking-[-0.03em] @fullsize:tracking-[-0.015em];
 			}
 		}
 		.claims > p {
-			@apply h-[cqw(36)] pl-[cqw(36)] fs-15 leading-[cqw(18)] tracking-[-0.007em];
+			@apply h-[cqw(36)] pl-[cqw(36)] fs-15 leading-[cqw(18)] tracking-[-0.06em] @px580:tracking-[-0.048em] @px750:tracking-[-0.035em] @px880:tracking-[-0.024em] @px980:tracking-[-0.0175em] @fullsize:tracking-[-0.007em];
 
 			a {
 				text-decoration: underline;
@@ -482,22 +481,28 @@
 	}
 	.soft-skills-section {
 		p {
-			@apply mt-auto px-[cqw(8)] pb-[cqw(12)] text-center fs-9 leading-[cqw(10)];
+			@apply mt-auto px-[cqw(8)] pb-[cqw(12)] text-center fs-9 leading-[cqw(10)] tracking-[-0.04em] @px800:tracking-[-0.03em] @px980:tracking-[-0.02em] @fullsize:tracking-[-0.015em];
 			font-variation-settings:
 				"wdth" 100,
 				"wght" 510,
 				"opsz" 17;
-			letter-spacing: -0.015em;
 		}
 	}
 	.other-section {
 		div {
 			@apply flex w-full flex-col gap-[cqw(3)];
 			h4 {
-				@apply pl-[cqw(21)] fs-16 leading-[cqw(19)] font-medium tracking-[0.02em];
+				@apply pl-[cqw(21)] fs-16 leading-[cqw(19)] font-medium tracking-[-0.01em] @px580:tracking-normal @px980:tracking-[0.01em] @fullsize:tracking-[0.02em];
 			}
 			p {
 				@apply fs-11 leading-[cqw(13)];
+
+				&.desc {
+					@apply tracking-[-0.015em];
+				}
+				&.tight-desc {
+					@apply tracking-[-0.06em] @px700:tracking-[-0.05em] @px800:tracking-[-0.048em] @px880:tracking-[-0.042em] @px980:tracking-[-0.035em] @fullsize:tracking-[-0.025em];
+				}
 			}
 		}
 	}
