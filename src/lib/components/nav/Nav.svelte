@@ -89,7 +89,7 @@
 	}}
 />
 <nav class="fixed bottom-0 left-0 z-50 flex w-full justify-center">
-	<div class="flex w-full max-w-297.5 justify-end p-2">
+	<div class="flex w-full max-w-fullsize justify-end p-2">
 		<div
 			class="flex origin-right scale-x-(--scale-x) scale-y-(--scale-y) gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
 			style="
@@ -108,12 +108,12 @@
 		>
 			<NavMenu bind:open={menus.contact} label="Contact">
 				{#snippet icon()}
-					<IconMessageCircleMore />
+					<IconMessageCircleMore role="img" aria-label="Message icon" />
 				{/snippet}
 				<DropdownMenu.Item>
 					{#snippet child({ props })}
 						<SelectableLink {...props} href="mailto:hi@hloth.dev" title="Email">
-							<IconMail />
+							<IconMail role="img" aria-label="Email icon" />
 							hi@hloth.dev
 						</SelectableLink>
 					{/snippet}
@@ -127,7 +127,7 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IconMessageSquareMore />
+							<IconMessageSquareMore role="img" aria-label="Message icon" />
 							@hloth:hloth.dev
 						</SelectableLink>
 					{/snippet}
@@ -141,7 +141,7 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IconSend />
+							<IconSend role="img" aria-label="Send icon" />
 							@hlothdev
 						</SelectableLink>
 					{/snippet}
@@ -149,20 +149,20 @@
 			</NavMenu>
 			<NavMenu bind:open={menus.save} label="Save" accent>
 				{#snippet icon()}
-					<IconDownload />
+					<IconDownload role="img" aria-label="Download icon" />
 				{/snippet}
 				{#each downloadOptions as { name, filename, link, sizeBytes } (link)}
 					<DropdownMenu.Item>
 						{#snippet child({ props })}
 							<a {...props} href={link} class={["cursor-pointer", props.class]} download={filename}>
 								{#if name === "PDF"}
-									<IconFile />
+									<IconFile role="img" aria-label="File icon" />
 								{:else if name === "AVIF"}
-									<IconImage />
+									<IconImage role="img" aria-label="Image icon" />
 								{:else if name === "JPEG"}
-									<IconFileImage />
+									<IconFileImage role="img" aria-label="Image icon" />
 								{:else}
-									<IconDownload />
+									<IconDownload role="img" aria-label="Download icon" />
 								{/if}
 								{name} ({fileSize(sizeBytes).human("si")})
 							</a>

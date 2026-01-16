@@ -1,4 +1,4 @@
-<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...$$props}>
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Message icon" {...$$props}>
 	<g clip-path="url(#clip0_3223_350)">
 		<path
 			fill-rule="evenodd"

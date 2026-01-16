@@ -1,4 +1,5 @@
 <script>
+	import "@fontsource-variable/roboto-flex/standard.css";
 	import { resumeVersion } from "$lib/consts";
 	import preview from "$lib/assets/Viktor-Shchelochkov-Resume-preview.jpeg?inline";
 	import GlobeIcon from "@/icons/GlobeIcon.svelte";
@@ -17,7 +18,7 @@
 			<source srcset="/{resumeVersion}/background.webp" type="image/webp" />
 			<img
 				src="/{resumeVersion}/background.jpeg"
-				alt="Resume background"
+				alt=""
 				class="pointer-events-none absolute top-0 left-0 z-1 size-full text-[0px] backdrop-blur-sm select-none"
 				loading="lazy"
 				decoding="async"
@@ -357,9 +358,8 @@
 			"SF Pro",
 			-apple-system,
 			BlinkMacSystemFont,
+			"Roboto Flex Variable",
 			system-ui,
-			Inter,
-			Roboto,
 			sans-serif;
 
 		.name {

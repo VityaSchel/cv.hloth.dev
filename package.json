@@ -46,6 +46,7 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
+		"@fontsource-variable/roboto-flex": "^5.2.8",
 		"file-size": "^1.0.0"
 	}
 }
