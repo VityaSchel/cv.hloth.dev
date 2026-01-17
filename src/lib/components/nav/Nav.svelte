@@ -1,29 +1,20 @@
 <script lang="ts">
-	import fileSize from "file-size";
-	import { untrack } from "svelte";
+	import { onMount, untrack } from "svelte";
 	import { Spring } from "svelte/motion";
+	import { setNavContext, NavContext } from "./nav-context.svelte";
+	import NavMenu from "./NavMenu.svelte";
+	import ContactMenu from "./ContactMenu.svelte";
+	import SaveMenu from "./SaveMenu.svelte";
 	import IconMessageCircleMore from "@lucide/svelte/icons/message-circle-more";
 	import IconDownload from "@lucide/svelte/icons/download";
-	import IconMail from "@lucide/svelte/icons/mail";
-	import IconMessageSquareMore from "@lucide/svelte/icons/message-square-more";
-	import IconSend from "@lucide/svelte/icons/send-horizontal";
-	import IconFile from "@lucide/svelte/icons/file";
-	import IconFileImage from "@lucide/svelte/icons/file-image";
-	import IconImage from "@lucide/svelte/icons/image";
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-	import { setNavContext, NavContext } from "./nav-context.svelte";
-	import SelectableLink from "../SelectableLink.svelte";
-	import NavMenu from "./NavMenu.svelte";
+	import type { DownloadOptions } from "$lib/download-options";
+	import SsrNavMenu from "./SsrNavMenu.svelte";
+	import { browser } from "$app/environment";
 
 	let {
 		downloadOptions
 	}: {
-		downloadOptions: {
-			name: string;
-			filename: string;
-			link: string;
-			sizeBytes: number;
-		}[];
+		downloadOptions: DownloadOptions;
 	} = $props();
 
 	let scrollY: undefined | number = $state(undefined);
@@ -80,6 +71,11 @@
 	const overstretch = $derived(Math.max(0, pLowCapped - 1));
 	const xStretch = $derived(1 + overstretch * xStretchMult);
 	const yStretch = $derived(1 + overstretch * yStretchMult);
+
+	let showSsrNavMenus = $state(true);
+	onMount(() => {
+		showSsrNavMenus = false;
+	});
 </script>
 
 <svelte:window
@@ -91,7 +87,7 @@
 <nav class="fixed bottom-0 left-0 z-50 flex w-full justify-center">
 	<div class="flex w-full max-w-fullsize justify-end p-2">
 		<div
-			class="flex origin-right scale-x-(--scale-x) scale-y-(--scale-y) gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
+			class="z-1 flex origin-right scale-x-(--scale-x) scale-y-(--scale-y) gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
 			style="
 				--bg: color-mix(
 					in oklab,
@@ -106,70 +102,39 @@
 				--scale-y: {100 / yStretch}%;
 			"
 		>
-			<NavMenu bind:open={menus.contact} label="Contact">
+			<NavMenu bind:open={menus.contact} label="Contact" id="contact">
 				{#snippet icon()}
 					<IconMessageCircleMore role="img" aria-label="Message icon" />
 				{/snippet}
-				<DropdownMenu.Item>
-					{#snippet child({ props })}
-						<SelectableLink {...props} href="mailto:hi@hloth.dev" title="Email">
-							<IconMail role="img" aria-label="Email icon" />
-							hi@hloth.dev
-						</SelectableLink>
-					{/snippet}
-				</DropdownMenu.Item>
-				<DropdownMenu.Item>
-					{#snippet child({ props })}
-						<SelectableLink
-							{...props}
-							href="https://matrix.to/#/@hloth:hloth.dev"
-							title="Matrix"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<IconMessageSquareMore role="img" aria-label="Message icon" />
-							@hloth:hloth.dev
-						</SelectableLink>
-					{/snippet}
-				</DropdownMenu.Item>
-				<DropdownMenu.Item>
-					{#snippet child({ props })}
-						<SelectableLink
-							{...props}
-							href="https://t.me/hlothdev"
-							title="Telegram"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<IconSend role="img" aria-label="Send icon" />
-							@hlothdev
-						</SelectableLink>
-					{/snippet}
-				</DropdownMenu.Item>
+				<ContactMenu />
 			</NavMenu>
-			<NavMenu bind:open={menus.save} label="Save" accent>
+			<NavMenu bind:open={menus.save} label="Save" accent id="save">
 				{#snippet icon()}
 					<IconDownload role="img" aria-label="Download icon" />
 				{/snippet}
-				{#each downloadOptions as { name, filename, link, sizeBytes } (link)}
-					<DropdownMenu.Item>
-						{#snippet child({ props })}
-							<a {...props} href={link} class={["cursor-pointer", props.class]} download={filename}>
-								{#if name === "PDF"}
-									<IconFile role="img" aria-label="File icon" />
-								{:else if name === "AVIF"}
-									<IconImage role="img" aria-label="Image icon" />
-								{:else if name === "JPEG"}
-									<IconFileImage role="img" aria-label="Image icon" />
-								{:else}
-									<IconDownload role="img" aria-label="Download icon" />
-								{/if}
-								{name} ({fileSize(sizeBytes).human("si")})
-							</a>
-						{/snippet}
-					</DropdownMenu.Item>
-				{/each}
+				<SaveMenu {downloadOptions} />
 			</NavMenu>
 		</div>
+		{#if showSsrNavMenus}
+			<div
+				class="ssr-nav-menus-container pointer-events-none absolute right-2 bottom-15.5 h-32.5 w-56 contain-layout"
+			>
+				<SsrNavMenu id="contact" align="left" bind:checked={menus.contact}>
+					<ContactMenu />
+				</SsrNavMenu>
+				<SsrNavMenu id="save" align="right" bind:checked={menus.save}>
+					<SaveMenu {downloadOptions} />
+				</SsrNavMenu>
+			</div>
+		{/if}
 	</div>
 </nav>
+
+<style>
+	.ssr-nav-menus-container :global(> div) {
+		transform: none !important;
+		top: auto !important;
+		left: auto !important;
+		bottom: 0;
+	}
+</style>

@@ -5,12 +5,14 @@
 	let {
 		open = $bindable(),
 		label,
+		id,
 		icon,
 		children,
 		accent
 	}: {
 		open?: boolean;
 		label: string;
+		id: string;
 		icon?: import("svelte").Snippet;
 		children?: import("svelte").Snippet;
 		accent?: boolean;
@@ -20,7 +22,7 @@
 <DropdownMenu.Root bind:open>
 	<DropdownMenu.Trigger>
 		{#snippet child({ props })}
-			<NavButton {...props} {icon} {accent} highlighted={open}>
+			<NavButton menuId="navbar-menu-{id}" {...props} {icon} {accent} highlighted={open}>
 				{label}
 			</NavButton>
 		{/snippet}
