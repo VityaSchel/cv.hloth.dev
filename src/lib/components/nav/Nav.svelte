@@ -85,7 +85,7 @@
 	}}
 />
 <nav class="fixed bottom-0 left-0 z-50 flex w-full justify-center">
-	<div class="flex w-full max-w-fullsize justify-end p-2">
+	<div class="flex w-full max-w-fullsize justify-end p-2 relative">
 		<div
 			class="z-1 flex origin-right scale-x-(--scale-x) scale-y-(--scale-y) gap-2 rounded-full border border-zinc-700/15 bg-(--bg) p-2 shadow-lg backdrop-blur-lg"
 			style="
