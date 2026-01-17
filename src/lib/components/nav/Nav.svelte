@@ -54,7 +54,7 @@
 		expandProgress.damping = 0.15 + (1 - velocityMult) * 0.15;
 		expandProgress.stiffness = 0.08 + velocityMult * 0.04;
 
-		expandProgress.target = scrollVelocity.current < 0 ? 1 : 0;
+		expandProgress.target = scrollVelocity.current <= 0 ? 1 : 0;
 	});
 
 	let p = $derived(expandProgress.current);

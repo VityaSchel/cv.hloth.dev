@@ -1,10 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 import type { PageServerLoad } from "./$types";
 import { resumeVersion } from "@/consts";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url)) + "/";
+import { PWD } from "$env/static/private";
 
 export const load: PageServerLoad = async () => {
 	return {
@@ -18,7 +16,7 @@ export const load: PageServerLoad = async () => {
 				filename,
 				link: "/" + resumeVersion + "/" + link,
 				sizeBytes: await fs.promises
-					.stat(path.join(__dirname, "../../static/", resumeVersion, link))
+					.stat(path.join(PWD, "./static/", resumeVersion, link))
 					.then((stat) => stat.size)
 			}))
 		)
