@@ -87,12 +87,12 @@
 		<div class="flex h-[cqw(462)] w-full flex-col gap-[cqw(24)] px-[cqw(32)] py-[cqw(28)]">
 			<h2 class="section-title">Work experience</h2>
 			<div
-				class="work-experience-section grid h-[cqw(349)] w-full grid-cols-2 grid-rows-3 gap-[cqw(16)]"
+				class="work-experience-section grid h-[cqw(349)] w-full grid-flow-col grid-cols-2 grid-rows-3 gap-[cqw(16)]"
 			>
 				<div>
 					<div>
 						<h4>Business Estate Solutions, Remote</h4>
-						<span>10/2025—01/2025</span>
+						<span>10/2025—01/2026</span>
 					</div>
 					<span>Senior Full Stack Developer and Leading Frontend Developer</span>
 					<p>
@@ -100,19 +100,6 @@
 						agents to manage contacts lists and share it internally, implemented contact book
 						importing algorithm for both iPhone’s iOS and Android and conversational questionnaire
 						for contact import via bot chat
-					</p>
-				</div>
-				<div>
-					<div>
-						<h4><a href="https://hloth.dev/showcase/unddit">Unddit & RYO Coin</a>, Remote</h4>
-						<span>01/2025—05/2025</span>
-					</div>
-					<span>Senior Frontend Developer</span>
-					<p>
-						I created a web application on Svelte to view removed posts and comments on Reddit with
-						sorting, filtering and viewing logic. Also created 4 landing pages and a detailed API
-						reference website for cryptocurrency RYO Coin with code examples and CURL request
-						command snippets
 					</p>
 				</div>
 				<div>
@@ -133,21 +120,6 @@
 				</div>
 				<div>
 					<div>
-						<h4><a href="https://hloth.dev/showcase/lufin">Freelance jobs</a></h4>
-						<span>05/2022—10/2024</span>
-					</div>
-					<span>
-						Full Stack Developer, System Administrator, Frontend Developer, Backend developer
-					</span>
-					<p>
-						I implemented several micro frontends, analytics views based on 2M+ rows and GBs of raw
-						data, charts for B2B, created a browser extension scraping pages, added AI to auto tag
-						and translate content to 23 languages, which improved SEO, mentored junior developer,
-						did code reviews
-					</p>
-				</div>
-				<div>
-					<div>
 						<h4>
 							<a href="https://hloth.dev/showcase/moreofme">Moreof.me</a>, Melbourne, Australia,
 							Remote
@@ -160,6 +132,34 @@
 						client-side, optimizing server workload, deployed scalable backend and configured
 						micro‐services with GCM, implemented real-time analytics, notifications system and
 						client-side video compression
+					</p>
+				</div>
+				<div>
+					<div>
+						<h4><a href="https://hloth.dev/showcase/unddit">Unddit & RYO Coin</a>, Remote</h4>
+						<span>01/2025—05/2025</span>
+					</div>
+					<span>Senior Frontend Developer</span>
+					<p>
+						I created a web application on Svelte to view removed posts and comments on Reddit with
+						sorting, filtering and viewing logic. Also created 4 landing pages and a detailed API
+						reference website for cryptocurrency RYO Coin with code examples and CURL request
+						command snippets
+					</p>
+				</div>
+				<div>
+					<div>
+						<h4><a href="https://hloth.dev/showcase/lufin">Freelance jobs</a></h4>
+						<span>05/2022—10/2024</span>
+					</div>
+					<span>
+						Full Stack Developer, System Administrator, Frontend Developer, Backend developer
+					</span>
+					<p>
+						I implemented several micro frontends, analytics views based on 2M+ rows and GBs of raw
+						data, charts for B2B, created a browser extension scraping pages, added AI to auto tag
+						and translate content to 23 languages, which improved SEO, mentored junior developer,
+						did code reviews
 					</p>
 				</div>
 				<div>
@@ -244,8 +244,8 @@
 					<div>
 						<h3>Docker, Podman</h3>
 						<p>
-							Using orchestration for my lufin open source project, also used GHCR and GCR for
-							deployment
+							Using orchestration for my <a href="https://hloth.dev/showcase/lufin">lufin</a> open source
+							project, also used GHCR and GCR for deployment
 						</p>
 					</div>
 					<div>
