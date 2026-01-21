@@ -14,5 +14,11 @@
 	},
 	"editor.quickSuggestions": {
 		"strings": "on"
+	},
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"Viktor-Shchelochkov-Resume-hq.avif": "Viktor-Shchelochkov-Resume-hq.*",
+		"Viktor-Shchelochkov-Resume.avif": "Viktor-Shchelochkov-Resume.*",
+		"background.avif": "background.*"
 	}
 }

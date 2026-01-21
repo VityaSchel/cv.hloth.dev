@@ -1,0 +1,23 @@
+{
+  "name": "figma-text-to-pdf",
+  "module": "index.ts",
+  "devDependencies": {
+    "@eslint/compat": "^2.0.1",
+    "@eslint/js": "^9.39.2",
+    "@types/bun": "latest",
+    "@types/pdfkit": "^0.17.4",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
+    "typescript-eslint": "^8.53.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.17.2"
+  }
+}
