@@ -8,7 +8,7 @@ I built this projects for my resume because Figma export would produce 10+MB PDF
 
 Export your Figma design using the text-letter-box-exporter plugin. This will produce a `layout.json` file, which you should place in the same directory as `generate-pdf.ts`.
 
-Then place background.jpg and a font that supports UTF-8, such as Noto Sans to font.ttf.
+Then place background.jpeg and a font that supports UTF-8, such as Noto Sans to font.ttf.
 
 Then run the script with Bun (in src directory), specifying the source width and height of your Figma design in pixels, as well as the font file:
 

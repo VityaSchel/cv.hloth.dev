@@ -7,6 +7,32 @@
 	import EmailIcon from "@/icons/EmailIcon.svelte";
 	import MessageIcon from "@/icons/MessageIcon.svelte";
 	import LinkedIn from "@/icons/LinkedIn.svelte";
+
+	/*
+	Updating the resume:
+	1. Optionally update the resume version in static/, README.md, src/lib/consts.ts, package.json
+	2. Export the Figma image as 2x png to the static/v{number}/source.png (gitignored)
+	3. If background has changed, export it as 2x png to static/v{number}/source-background.png (gitignored)
+	4. Run `bun generate` to regenerate:
+		- previews:
+			- src/lib/assets/Viktor-Shchelochkov-Resume-preview.jpeg
+		- background images:
+			- static/v{number}/background.avif
+			- static/v{number}/background.jpeg
+			- static/v{number}/background.webp
+		- high quality resume images for download:
+			- static/v{number}/Viktor-Shchelochkov-Resume-hq.avif
+			- static/v{number}/Viktor-Shchelochkov-Resume-hq.jpeg
+		- web optimized resume images:
+			- static/v{number}/Viktor-Shchelochkov-Resume.avif
+			- static/v{number}/Viktor-Shchelochkov-Resume.jpeg
+			- static/v{number}/Viktor-Shchelochkov-Resume.webp
+		- pdf background:
+			- static/v{number}/source-background-pdf.jpeg
+	5. Follow instructions in figma-text-to-pdf to generate the PDF version
+	6. Put it in static/v{number}/Viktor-Shchelochkov-Resume.pdf
+	7. Test locally and deploy
+	*/
 </script>
 
 <div

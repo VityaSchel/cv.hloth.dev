@@ -350,7 +350,7 @@ async function generatePDF(
 	page.drawImage(image, {
 		x: 0,
 		y: A4_HEIGHT - imageHeight,
-		width: imageWidth,
+		width: imageWidth + 0.5,
 		height: imageHeight,
 	});
 
@@ -478,7 +478,7 @@ const outputFile = "./output.pdf";
 console.log("Generating PDF...");
 await generatePDF(
 	letters,
-	"./background.jpg",
+	"./background.jpeg",
 	outputFile,
 	sourceWidth,
 	sourceHeight,
