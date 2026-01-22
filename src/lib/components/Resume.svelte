@@ -494,6 +494,12 @@
 			}
 			p {
 				@apply fs-11 leading-[cqw(13)] tracking-[-0.05em] @px750:tracking-[-0.045em] @px980:tracking-[-0.03em] @fullsize:tracking-[-0.015em];
+
+				a {
+					text-decoration: underline;
+					text-underline-offset: 10%;
+					text-decoration-thickness: 5%;
+				}
 			}
 		}
 		.claims > p {
