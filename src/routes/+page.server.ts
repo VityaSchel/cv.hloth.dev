@@ -1,9 +1,9 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
+import process from "node:process";
 import type { PageServerLoad } from "./$types";
-import { resumeVersion } from "@/consts";
-import { PWD } from "$env/static/private";
-import { downloadOptions } from "@/download-options";
+import { resumeVersion } from "#lib/consts.js";
+import { downloadOptions } from "#lib/download-options.js";
 
 export const load: PageServerLoad = async () => {
 	return {
@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 				filename,
 				link: "/" + resumeVersion + "/" + link,
 				sizeBytes: await fs.promises
-					.stat(path.join(PWD, "./static/", resumeVersion, link))
+					.stat(path.join(process.cwd(), "./static/", resumeVersion, link))
 					.then((stat) => stat.size)
 			}))
 		)

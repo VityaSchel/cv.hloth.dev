@@ -7,9 +7,9 @@
 	import SaveMenu from "./SaveMenu.svelte";
 	import IconMessageCircleMore from "@lucide/svelte/icons/message-circle-more";
 	import IconDownload from "@lucide/svelte/icons/download";
-	import type { DownloadOptions } from "$lib/download-options";
+	import type { DownloadOptions } from "#lib/download-options.js";
 	import SsrNavMenu from "./SsrNavMenu.svelte";
-	import { browser } from "$app/environment";
+	import { browser } from "$app/env";
 
 	let {
 		downloadOptions

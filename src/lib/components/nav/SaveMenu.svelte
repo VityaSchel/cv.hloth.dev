@@ -1,10 +1,10 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
 	import IconFile from "@lucide/svelte/icons/file";
 	import IconFileImage from "@lucide/svelte/icons/file-image";
 	import IconImage from "@lucide/svelte/icons/image";
 	import IconDownload from "@lucide/svelte/icons/download";
-	import type { DownloadOptions } from "$lib/download-options";
+	import type { DownloadOptions } from "#lib/download-options.js";
 	import fileSize from "file-size";
 
 	let {

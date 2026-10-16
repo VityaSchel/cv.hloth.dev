@@ -3,7 +3,7 @@
 	import IconMessageSquareMore from "@lucide/svelte/icons/message-square-more";
 	import IconSend from "@lucide/svelte/icons/send-horizontal";
 	import SelectableLink from "../SelectableLink.svelte";
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as DropdownMenu from "#lib/components/ui/dropdown-menu/index.js";
 </script>
 
 <DropdownMenu.Item>

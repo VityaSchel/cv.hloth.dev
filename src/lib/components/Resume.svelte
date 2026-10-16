@@ -1,12 +1,12 @@
 <script>
 	import "@fontsource-variable/roboto-flex/standard.css";
-	import { resumeVersion } from "$lib/consts";
-	import preview from "$lib/assets/Viktor-Shchelochkov-Resume-preview.jpeg?inline";
-	import GlobeIcon from "@/icons/GlobeIcon.svelte";
-	import GeoPinIcon from "@/icons/GeoPinIcon.svelte";
-	import EmailIcon from "@/icons/EmailIcon.svelte";
-	import MessageIcon from "@/icons/MessageIcon.svelte";
-	import LinkedIn from "@/icons/LinkedIn.svelte";
+	import { resumeVersion } from "#lib/consts.js";
+	import preview from "#lib/assets/Viktor-Shchelochkov-Resume-preview.jpeg?inline";
+	import GlobeIcon from "#lib/icons/GlobeIcon.svelte";
+	import GeoPinIcon from "#lib/icons/GeoPinIcon.svelte";
+	import EmailIcon from "#lib/icons/EmailIcon.svelte";
+	import MessageIcon from "#lib/icons/MessageIcon.svelte";
+	import LinkedIn from "#lib/icons/LinkedIn.svelte";
 
 	/*
 	Updating the resume:
