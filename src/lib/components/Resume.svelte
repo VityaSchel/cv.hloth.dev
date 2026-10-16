@@ -72,13 +72,13 @@
 							<h2 class="role fs-28 font-semibold capitalize">Senior full stack web developer</h2>
 							<div class="flex h-[cqw(26)] items-center gap-[cqw(10)]">
 								<GeoPinIcon class="size-[cqw(16)]" />
-								<span class="location pr-[cqw(6)] fs-22">Barcelona, Spain</span>
+								<span class="location pr-[cqw(6)] fs-22">Madrid, Spain</span>
 							</div>
 						</div>
 					</div>
 					<p class="intro h-[cqw(52)] w-full fs-22 leading-[cqw(26)]">
-						I’ve been creating progressive web applications that work everywhere and designing
-						websites accessible for everyone for over 5 years
+						I’ve been building modern applications that work natively everywhere and designing
+						variety of successful products for over 6 years
 					</p>
 				</div>
 				<div class="contacts flex flex-col gap-[cqw(6)] fs-22">
